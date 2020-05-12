@@ -1,33 +1,29 @@
 
-
-
-.blog-img  img {
-  width: 100%;
-  min-height: 220px;
+.blog-img {
+  width: 310px;
+  height: 210px;
+  background-size: cover;
+  margin-bottom: 20px;
 }
+
+
 
 .date-event {
   padding: 10px;
   background-color: #fff;
   position: relative;
-  top: -213px;
+  top: 8px;
   border-bottom-right-radius: 5px;
 }
 
 
 @media (max-width: 768px) {
-  .date-event {
-    top: -230px;
-  }
+
 }
 
 @media (max-width: 414px) {
-  .date-event {
-    top: -250px;
-  }
+
 }
 @media (max-width: 375px) {
-  .date-event {
-    top: -222px;
-  }
+
 }

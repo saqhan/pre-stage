@@ -1,13 +1,10 @@
-
-
-
-.blog-img  img {
-  width: 100%;
-  min-height: 220px;
+.blog-img {
+  width: 310px;
+  height: 210px;
+  background-size: cover;
 }
 
-
-
-
-
-
+.blog-card {
+  width: 310px;
+  margin: auto;
+}

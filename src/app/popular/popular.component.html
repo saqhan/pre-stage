@@ -2,20 +2,19 @@
   <div class="col-12">
     <h1 class="font-weight-bold pb-4">Popular Resours</h1>
   </div>
-  <div class="col-12 col-lg-7 ">
-    <div class="lenta-news d-flex" *ngFor="let popular of popularNews">
-      <div class="lenta-img">
-        <img src="{{ popular.img }}" class="rounded" alt="" />
+  <div class="col-12 col-lg-7">
+    <div class="news-block" *ngFor="let popular of popularNews">
+      <div class="news-img" [ngStyle]="{ 'background-image': 'url(' + popular.img + ')' }">
       </div>
-      <div class="lenta-info pl-3">
-        <div class="lenta-category small text-primary">
-          {{ popular.category }}
+      <div class="news-info">
+        <div class="lenta-category">
+          {{popular.category}}
         </div>
-        <div class="lenta-title font-weight-bold pt-1">
-          {{ popular.title }}
+        <div class="lenta-title">
+          {{popular.title}}
         </div>
         <div class="btn-read">
-          <a routerLink="/second-page/" routerLinkActive="active">Read Report</a>
+          <a href="#">Подробнее</a>
         </div>
       </div>
     </div>

@@ -6,14 +6,15 @@
   <div class="col-12 col-md-6 col-lg-4 pt-5 pt-lg-4" *ngFor="let news of blog">
     <div class="d-flex justify-content-between">
       <div class="blog-card">
-        <div class="blog-img">
-          <img class="rounded" src={{news.img}} />
-        </div>
+        <div
+          class="blog-img"
+          [ngStyle]="{ 'background-image': 'url(' + news.img + ')' }"
+        ></div>
         <div class="blog-category text-primary small pt-4">
-          {{news.category}}
+          {{ news.category }}
         </div>
         <div class="blog-title pt-3 font-weight-bold">
-          {{news.title}}
+          {{ news.title }}
         </div>
         <div class="btn-read pt-3">
           <a routerLink="/second-page/" routerLinkActive="active">Read Story</a>
@@ -21,6 +22,4 @@
       </div>
     </div>
   </div>
-
-
 </div>

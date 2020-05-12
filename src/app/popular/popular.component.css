@@ -15,24 +15,45 @@
   border-bottom: 1px solid #007bff;
 }
 
+.news-block {
+  display: flex;
+}
 
+.news-block {
+  margin-bottom: 40px;
+}
+
+.news-block:last-child {
+  margin-bottom: 0;
+}
+
+.news-img {
+  width: 248px;
+  height: 128px;
+  background-size: cover;
+  border-radius: 3px;
+  margin-right: 30px;
+}
 
 .lenta-title {
   min-height: 58px;
   margin-top: 10px;
   line-height: 1.2;
-}
-
-.lenta-news {
-  margin-bottom: 40px;
-}
-
-.lenta-news:last-child {
-  margin-bottom: 0px;
+  font-weight: 500;
+  min-height: 75px;
 }
 
 .lenta-img {
-  padding-right: 30px;
+  width: 128px;
+  height: 128px;
+  background-size: cover;
+  margin-right: 30px;
+  border-radius: 3px;
+}
+
+.lenta-category {
+  font-size: 12px;
+  color: #007bff;
 }
 
 @media (min-width: 768px) {
@@ -41,9 +62,8 @@
   }
 }
 
-  @media (max-width: 768px) {
-    .lenta-title {
-      width: 100%;
-    }
+@media (max-width: 768px) {
+  .lenta-title {
+    width: 100%;
   }
-
+}

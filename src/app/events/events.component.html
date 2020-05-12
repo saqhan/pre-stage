@@ -7,8 +7,8 @@
   >
     <div class="d-flex justify-content-between">
       <div class="blog-card">
-        <div class="blog-img">
-          <img class="rounded" src="{{ event.img }}" />
+        <div class="blog-img" [ngStyle]="{ 'background-image': 'url(' + event.img + ')' }">
+
           <span class="date-event" *ngIf="event.date">{{ event.date }}</span>
           <span *ngIf="!event.date"> </span>
         </div>
