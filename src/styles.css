@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "@style/buttons/buttons.css";
+
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}

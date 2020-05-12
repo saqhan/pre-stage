@@ -1,0 +1,42 @@
+<div class="row pt-5 pb-5">
+  <div class="col-12 col-lg-7">
+    <div class="main-news" *ngFor="let main of blogCarusel">
+      <div *ngIf="main.main">
+        <div class="img-news m-auto">
+          <img class="rounded pb-1" src="{{ main.img }}" alt="" />
+        </div>
+        <div class="category-news pt-3 text-primary small">
+          {{ main.category }}
+        </div>
+        <div class="title-news pt-3 h2 font-weight-bold">
+          {{ main.title }}
+        </div>
+        <div class="sub-title-news pt-3 pb-3 text-muted">
+          {{ main.subTitle }}
+        </div>
+        <a href="/second-page/" class="btn btn-primary btn-custom">Read Story</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-5">
+    <div *ngFor="let news of blogCarusel">
+      <div
+        class="lenta-news d-flex justify-content-between"
+        *ngIf="news.lenta"
+      >
+        <div class="lenta-img pr-4">
+          <img src="{{ news.img }}" class="rounded" alt="" />
+        </div>
+        <div class="lenta-info">
+          <div class="lenta-category small text-danger">{{ news.category }}</div>
+          <div class="lenta-title font-weight-bold pt-1">
+            {{ news.title }}
+          </div>
+          <div class="btn-read">
+            <a href="/second-page/">Read Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

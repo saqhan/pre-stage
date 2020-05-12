@@ -1,0 +1,27 @@
+<div class="row pt-5 pb-5">
+  <div class="col-12">
+    <h1 class="font-weight-bold">Upcoming events</h1>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 pt-5 pt-lg-4"
+    *ngFor="let event of events"
+  >
+    <div class="d-flex justify-content-between">
+      <div class="blog-card">
+        <div class="blog-img">
+          <img class="rounded" src="{{ event.img }}" />
+          <span class="date-event" *ngIf="event.date">{{ event.date }}</span>
+          <span *ngIf="!event.date"> </span>
+        </div>
+        <div class="blog-category text-warning small">
+          {{ event.category }}
+        </div>
+        <div class="blog-title pt-3 font-weight-bold">
+          {{ event.title }}
+        </div>
+        <div class="btn-read pt-3">
+          <a href="/second-page/">Read Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

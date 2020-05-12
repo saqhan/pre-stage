@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wibbitz"
+    }
+  },
+  "defaultProject": "wibbitz",
+  "cli": {
+    "analytics": "ed2d78e3-1f42-4b4a-83dc-82b52d77a827"
+  }
 }

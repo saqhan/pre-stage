@@ -1,0 +1,49 @@
+.banner {
+  background-image: url("../../assets/img/img3.jpg");
+  background-size: cover;
+}
+
+.banner .btn-read a {
+  color: #fff;
+  border-bottom: 1px solid #ffffff;
+  transition: 0.3s all;
+}
+
+.banner .btn-read a:hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+}
+
+
+
+.lenta-title {
+  min-height: 58px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.lenta-news {
+  margin-bottom: 40px;
+}
+
+.lenta-news:last-child {
+  margin-bottom: 0px;
+}
+
+.lenta-img {
+  padding-right: 30px;
+}
+
+@media (min-width: 768px) {
+  .lenta-title {
+    width: 75%;
+  }
+}
+
+  @media (max-width: 768px) {
+    .lenta-title {
+      width: 100%;
+    }
+  }
+

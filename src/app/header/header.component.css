@@ -1,0 +1,15 @@
+/* header */
+.navbar-brand img {
+  width: 125px;
+}
+
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url('../../assets/img/navbar-toggler-icon.svg');
+}
+.btn-custom-head {
+  padding: 2px 10px ;
+  font-size: 12px;
+  border-radius: 10px !important;
+  margin-left: -20px;
+}
