@@ -12,6 +12,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { FooterComponent } from './footer/footer.component';
 import { SinglePageComponent } from './single-page/single-page.component';
 import {SecondPageComponent} from "./second-page/second-page.component";
+import { ListItemsComponent } from './list-items/list-items.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {SecondPageComponent} from "./second-page/second-page.component";
     SubscribeComponent,
     FooterComponent,
     SinglePageComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    ListItemsComponent,
   ],
   imports: [
     BrowserModule,
