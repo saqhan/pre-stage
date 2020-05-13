@@ -1,25 +1,28 @@
-<div class="row pt-5 pb-5">
-  <div class="col-12">
-    <h1 class="font-weight-bold">New Blog Post</h1>
-  </div>
+<div class="container">
+  <div class="row pt-5 pb-5">
+    <div class="col-12">
+      <h1 class="font-weight-bold">New Blog Post</h1>
+    </div>
 
-  <div class="col-12 col-md-6 col-lg-4 pt-5 pt-lg-4" *ngFor="let news of blog">
-    <div class="d-flex justify-content-between">
-      <div class="blog-card">
-        <div
-          class="blog-img"
-          [ngStyle]="{ 'background-image': 'url(' + news.img + ')' }"
-        ></div>
-        <div class="blog-category text-primary small pt-4">
-          {{ news.category }}
-        </div>
-        <div class="blog-title pt-3 font-weight-bold">
-          {{ news.title }}
-        </div>
-        <div class="btn-read pt-3">
-          <a routerLink="/second-page/" routerLinkActive="active">Read Story</a>
+    <div class="col-12 col-md-6 col-lg-4 pt-5 pt-lg-4" *ngFor="let news of blog">
+      <div class="d-flex justify-content-between">
+        <div class="blog-card">
+          <div
+            class="blog-img"
+            [ngStyle]="{ 'background-image': 'url(' + news.img + ')' }"
+          ></div>
+          <div class="blog-category text-primary small pt-4">
+            {{ news.category }}
+          </div>
+          <div class="blog-title pt-3 font-weight-bold">
+            {{ news.title }}
+          </div>
+          <div class="btn-read pt-3">
+            <a routerLink="/second-page/" routerLinkActive="active">Read Story</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>

@@ -1,33 +1,37 @@
-<div class="row pt-5 pb-5">
-  <div class="col-12">
-    <h1 class="font-weight-bold pb-4">Popular Resours</h1>
-  </div>
-  <div class="col-12 col-lg-7">
-    <div class="news-block" *ngFor="let popular of popularNews">
-      <div class="news-img" [ngStyle]="{ 'background-image': 'url(' + popular.img + ')' }">
-      </div>
-      <div class="news-info">
-        <div class="lenta-category">
-          {{popular.category}}
-        </div>
-        <div class="lenta-title">
-          {{popular.title}}
-        </div>
-        <div class="btn-read">
-          <a href="#">Подробнее</a>
+<div class="container">
+  <div class="row pt-5 pb-5">
+    <div class="col-12">
+      <h1 class="font-weight-bold pb-4">Popular Resours</h1>
+    </div>
+    <div class="col-12 col-lg-7">
+      <div class="news-block" *ngFor="let popular of popularNews">
+        <div
+          class="news-img"
+          [ngStyle]="{ 'background-image': 'url(' + popular.img + ')' }"
+        ></div>
+        <div class="news-info">
+          <div class="lenta-category">
+            {{ popular.category }}
+          </div>
+          <div class="lenta-title">
+            {{ popular.title }}
+          </div>
+          <div class="btn-read">
+            <a href="#">Подробнее</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="col-12 col-lg-5 p-5 p-lg-0 banner d-flex align-items-center flex-column justify-content-center"
-  >
-    <div class="banner-title text-center text-white">
-      Storyteller Circle <br />
-      Event Series
-    </div>
-    <div class="btn-read pt-3">
-      <a href="#">Watch Webinar</a>
+    <div
+      class="col-12 col-lg-5 p-5 p-lg-0 banner d-flex align-items-center flex-column justify-content-center"
+    >
+      <div class="banner-title text-center text-white">
+        Storyteller Circle <br />
+        Event Series
+      </div>
+      <div class="btn-read pt-3">
+        <a href="#">Watch Webinar</a>
+      </div>
     </div>
   </div>
 </div>

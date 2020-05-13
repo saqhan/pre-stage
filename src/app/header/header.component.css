@@ -13,3 +13,13 @@
   border-radius: 10px !important;
   margin-left: -20px;
 }
+
+header {
+  margin-top: 50px;
+}
+
+@media (max-width: 414px) {
+  header {
+    margin-top: 20px;
+  }
+}

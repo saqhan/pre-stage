@@ -1,35 +1,57 @@
 <app-header></app-header>
-<div class="bread-crumbs">
-  <ul>
-    <li class="nav-link"><a routerLink="/">Home</a></li>
-    <li class="nav-link active"><a routerLink="#" >List Items</a></li>
-  </ul>
+<div class="container">
+  <div class="bread-crumbs">
+    <div class="col left">
+      <ul>
+        <li class="nav-link"><a routerLink="/">Home</a></li>
+        <li class="nav-link active"><a routerLink="#">List Items</a></li>
+      </ul>
+    </div>
+    <div class="col right">
+      <ul>
+        <li class="nav-link"><a routerLink="/">All</a></li>
+        <li class="nav-link"><a routerLink="#">Second Page</a></li>
+        <li class="nav-link active"><a routerLink="#">List Items</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="list-items">
-  <div class="row item" *ngFor="let item of items">
-    <div class="col-12 col-sm-4">
-      <div class="item-img" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
-
+<div class="container-fluid" *ngFor="let item of items">
+  <div class="container list-items">
+    <div class="row item">
+      <div class="col-12 col-sm-4">
+        <div
+          class="item-img"
+          [ngStyle]="{ 'background-image': 'url(' + item.img + ')' }"
+        ></div>
+      </div>
+      <div class="col">
+        <div class="item-title">
+          <a routerLink="/">{{ item.title }}</a>
+        </div>
+        <div class="item-info">
+          <div class="item-author">
+            <a routerLink="/">{{ item.author }}</a>
+          </div>
+          <div class="item-date">
+            <a routerLink="/">{{ item.date }}</a>
+          </div>
+          <button class="btn btn-primary btn-custom-head" routerLink="#">
+            {{ item.category }}
+          </button>
+        </div>
+        <div class="item-sub-title">
+          {{ item.subTitle }}
+        </div>
+        <div class="item-link">
+          <a routerLink="#"
+            >Keep Readeing <i class="fas fa-chevron-circle-right"></i
+          ></a>
+        </div>
       </div>
     </div>
-    <div class="col" >
-      <div class="item-title">{{item.title}}</div>
-      <div class="item-info">
-        <div class="item-author" >{{item.author}}</div>
-        <div class="item-date">{{item.date}}</div>
-        <button class="btn btn-primary btn-custom-head" routerLink="#">Editor</button>
-      </div>
-      <div class="item-sub-title">
-        {{item.subTitle}}
-      </div>
-      <div class="item-link">
-        <a routerLink="#">Keep Readeing <i class="fas fa-chevron-circle-right"></i></a>
-      </div>
-    </div>
-
   </div>
-
 </div>
 
 <app-footer></app-footer>
