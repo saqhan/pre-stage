@@ -1,6 +1,7 @@
 .banner {
   background-image: url("../../assets/img/img3.jpg");
   background-size: cover;
+
 }
 
 .banner .btn-read a {
@@ -65,5 +66,17 @@
 @media (max-width: 768px) {
   .lenta-title {
     width: 100%;
+  }
+}
+
+@media (max-width: 414px){
+  .banner {
+    margin-top: 50px;
+  }
+  .blog-img {
+    margin: auto;
+  }
+  .block-title {
+    text-align: center;
   }
 }
