@@ -16,3 +16,12 @@
   background-color: #0062cc;
   border-color: #005cbf;
 }
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}

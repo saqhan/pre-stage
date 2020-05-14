@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {SinglePageComponent} from "./single-page/single-page.component";
 import {SecondPageComponent} from "./second-page/second-page.component";
 import {ListItemsComponent} from "./list-items/list-items.component";
+import {ChatComponent} from "./chat/chat.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'list-items',
     component: ListItemsComponent,
+  },
+  {
+    path: 'chat',
+    component: ChatComponent,
   }
 ];
 
