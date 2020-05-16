@@ -14,6 +14,11 @@ import { SinglePageComponent } from './single-page/single-page.component';
 import {SecondPageComponent} from "./second-page/second-page.component";
 import { ListItemsComponent } from './list-items/list-items.component';
 import { ChatComponent } from './chat/chat.component';
+import { PersonalMessagesComponent } from './chat/res/view/personal-messages/personal-messages.component';
+import { FilesComponent } from './chat/res/view/files/files.component';
+import { MainUserComponent } from './chat/res/view/main-user/main-user.component';
+import { UsersComponent } from './chat/res/view/users/users.component';
+import { AddQuestionComponent } from './chat/res/view/add-question/add-question.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import { ChatComponent } from './chat/chat.component';
     SecondPageComponent,
     ListItemsComponent,
     ChatComponent,
+    PersonalMessagesComponent,
+    FilesComponent,
+    MainUserComponent,
+    UsersComponent,
+    AddQuestionComponent,
   ],
   imports: [
     BrowserModule,

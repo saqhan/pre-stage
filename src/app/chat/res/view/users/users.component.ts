@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { StoreMessagesService } from '../store-messages.service';
+import {StoreMessagesService} from "../../../../store-messages.service";
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class ChatComponent implements OnInit {
-  constructor(private messageServis: StoreMessagesService) {}
+export class UsersComponent implements OnInit {
+
+  constructor(private messageServis: StoreMessagesService) { }
 
   messages = this.messageServis.messages;
 
@@ -19,17 +20,18 @@ export class ChatComponent implements OnInit {
     return this.messageServis.showPersonal;
   }
 
-  toggleUsers() {
-    return this.messageServis.toggleUsers();
+  togglePersonal() {
+    return this.messageServis.togglePersonal();
   }
 
   toggleShowChat() {
     return this.messageServis.toggleShowChat();
   }
-
   closeChat() {
     return this.messageServis.closeChat();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

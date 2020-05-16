@@ -1,0 +1,32 @@
+<div *ngFor="let mess of messages">
+  <div class="col-12 chat-user" *ngIf="!mess.main">
+    <div class="user" (click)="togglePersonal()">
+      <div class="user-img">
+        <div
+          class="img"
+          [ngStyle]="{
+                'background-image':
+                  'url(' + mess.img + ')'
+              }"
+        ></div>
+      </div>
+      <div class="user-text">
+        <div class="user-info">
+          <div class="name">
+            <span>{{mess.name}}</span>
+          </div>
+          <div class="date">
+            {{mess.date}}
+          </div>
+        </div>
+        <div class="message">
+          <span  class="add">{{mess.message}}</span>
+        </div>
+        <div class="user-position" *ngIf="mess.position">
+          <span class="position">{{mess.position}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
