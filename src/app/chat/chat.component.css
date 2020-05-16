@@ -1,9 +1,12 @@
-.wrapper-chat {
+.wrapper {
   max-width: 400px;
+  margin: 50px auto;
+}
+
+.wrapper-chat {
   box-shadow: 0 0 10px 3px #ccc;
-  margin: 50px auto auto;
   border-radius: 2px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .header-chat {
@@ -121,7 +124,12 @@
   position: absolute;
   left: 290px;
   z-index: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 46%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(255, 255, 255, 1) 46%
+  );
 }
 
 .add::after {
@@ -184,7 +192,7 @@
 }
 
 .header-chat a i:hover {
-    color: #72b94d;
+  color: #72b94d;
 }
 
 .btn-open {
@@ -196,17 +204,14 @@
   color: #fff;
   border-radius: 50%;
   outline: none;
-
 }
 
 .open-chat {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
+  text-align: right;
 }
 
 .open-chat::after {
-  content: '1';
+  content: "1";
   background-color: #c73f45;
   position: relative;
   top: -25px;
