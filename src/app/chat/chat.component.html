@@ -1,235 +1,171 @@
 <div class="wrapper">
-<div class="wrapper-chat">
+<div class="wrapper-chat" *ngIf="showChat">
   <div class="container">
     <div class="row">
       <div class="col-12 header-chat">Чат с банком
-        <a routerLink="#">
+        <a routerLink="#" (click)="closeChat()">
           <i class="fas fa-times-circle"></i>
         </a></div>
-      <div class="col-12">
-        <div class="chat-files">
-          <div class="block-input">
-            <input
-              type="text"
-              class="input-search"
-              placeholder="Поис чатов и сообщений"
-            />
+      <div *ngIf="!showPersonal" >
+        <div class="col-12">
+          <div class="chat-files">
+            <div class="block-input">
+              <input
+                type="text"
+                class="input-search"
+                placeholder="Поис чатов и сообщений"
+              />
+            </div>
+            <div class="block-file">
+              <i class="far fa-file-alt"></i>
+            </div>
           </div>
-          <div class="block-file">
-            <i class="far fa-file-alt"></i>
+        </div>
+        <div *ngFor="let main of messages">
+          <div class="col-12 chat-user-main" *ngIf="main.main" >
+            <div class="user" (click)="togglePersonal()" >
+              <div class="user-img">
+                <div
+                  class="img"
+                  [ngStyle]="{
+                'background-image':
+                  'url(' + main.img + ')'
+              }"
+                ></div>
+              </div>
+              <div class="user-text">
+                <div class="user-info">
+                  <div class="name">
+                    {{main.message}}
+                  </div>
+                  <div class="date">
+                    {{main.date}}
+                  </div>
+                </div>
+                <div class="message" >
+                <span class="add">
+                  {{main.message}}</span
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 chat-user" *ngFor="let mess of messages">
+          <div class="user" (click)="togglePersonal()">
+            <div class="user-img">
+              <div
+                class="img"
+                [ngStyle]="{
+                'background-image':
+                  'url(' + mess.img + ')'
+              }"
+              ></div>
+            </div>
+            <div class="user-text">
+              <div class="user-info">
+                <div class="name">
+                  <span>{{mess.name}}</span>
+                </div>
+                <div class="date">
+                  {{mess.date}}
+                </div>
+              </div>
+              <div class="message">
+                <span  class="add">{{mess.message}}</span>
+              </div>
+              <div class="user-position" *ngIf="mess.position">
+                <span class="position">{{mess.position}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="btn-new-ask">
+            <button class="btn-add-question">Задать новый вопрос</button>
           </div>
         </div>
       </div>
-      <div class="col-12 chat-user-main">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
+      <div class="personal-messages" *ngIf="showPersonal">
+        <div class="col-12 chat-user-main">
+          <div class="user">
+            <div class="btn-back" (click)="togglePersonal()">
+              <span><i class="fas fa-chevron-left"></i></span>
+            </div>
+            <div class="user-img">
+              <div
+                class="img"
+                [ngStyle]="{
                 'background-image':
                   'url(https://via.placeholder.com/500x500?text=Visit)'
               }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                Эм, виртуальный асситент
-              </div>
-              <div class="date">
-                28 Апр, 14:05
-              </div>
+              ></div>
             </div>
-            <div class="message">
-              <a href="/" class="add">
-                Здравствуйте! На майских праздниках вам конец!</a
-              >
+              <div class="personal-user">
+                <div class="name">
+                  Ксения
+                </div>
+
+              </div>
+          </div>
+          <div class="menu-personal">
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <div class="messages-block">
+          <div class="personal-mess">
+            <div class="mess-user">
+              <span class="user-text" >Вирус эволиционирует!</span>
+              <span class="mess-date" >30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="admin-mess">
+
+            <div class="mess-admin">
+              <div class="position-admin">
+                <span>Ксения, бизнес-ассистент</span>
+              </div>
+              <span class="admin-text">Так давайте снимим карантин, пусть все выйдут на работу!</span>
+              <span class="mess-date" >30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="personal-mess">
+            <div class="mess-user">
+              <span class="user-text" >Мировой заговр, все об этом знают!</span>
+              <span class="mess-date" >30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="admin-mess">
+
+            <div class="mess-admin">
+              <div class="position-admin">
+                <span>Ксения, бизнес-ассистент</span>
+              </div>
+              <span class="admin-text">Мы с Вами согласны и сейчас перевели миллион на лечение.</span>
+              <span class="mess-date" >30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="personal-mess">
+            <div class="mess-user">
+              <span class="user-text" >Спасибо! очень ценю!</span>
+              <span class="mess-date" >30.08.2020 09:20</span>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
+        <div class="col-12">
+          <div class="btn-new-ask">
+            <button class="btn-add-question">Задать новый вопрос</button>
           </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/"> Михаил</a>
-              </div>
-              <div class="date">
-                09 Окт, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="" class="add"
-                >Во тьме ночной, при свете дня, написать этот текст</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/">Алиса</a>
-              </div>
-              <div class="date">
-                28 Янв, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="/" class="add">Какое то текстовое сообщение.</a>
-            </div>
-            <div class="user-position">
-              <span class="position">Бухгалтер</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/"> Михаил</a>
-              </div>
-              <div class="date">
-                09 Окт, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="" class="add"
-                >Во тьме ночной, при свете дня, написать этот текст</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/"> Михаил</a>
-              </div>
-              <div class="date">
-                09 Окт, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="" class="add"
-                >Во тьме ночной, при свете дня, написать этот текст</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/"> Михаил</a>
-              </div>
-              <div class="date">
-                09 Окт, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="" class="add"
-                >Во тьме ночной, при свете дня, написать этот текст</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 chat-user">
-        <div class="user">
-          <div class="user-img">
-            <div
-              class="img"
-              [ngStyle]="{
-                'background-image':
-                  'url(https://via.placeholder.com/500x500?text=Visit)'
-              }"
-            ></div>
-          </div>
-          <div class="user-text">
-            <div class="user-info">
-              <div class="name">
-                <a routerLink="/"> Михаил</a>
-              </div>
-              <div class="date">
-                09 Окт, 14 : 05
-              </div>
-            </div>
-            <div class="message">
-              <a routerLink="" class="add"
-                >Во тьме ночной, при свете дня, написать этот текст</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="btn-new-ask">
-          <button class="btn-add-question">Задать новый вопрос</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
 <div class="open-chat" >
-  <button class="btn-open">
-  <i class="far fa-comment-dots"></i>
-</button>
+  <button class="btn-open" (click)="toggleShowChat()">
+    <span *ngIf="!showChat"><i class="far fa-comment-dots"></i></span>
+    <span *ngIf="showChat"><i class="fas fa-times"></i></span>
+  </button>
 </div>
-</div>
-
 
