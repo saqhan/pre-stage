@@ -65,7 +65,7 @@ export class StoreMessagesService {
 
   showChat = true;
 
-  showPersonal = 'users';
+  showPersonal = 'files';
 
   togglePersonal() {
     return (this.showPersonal = 'person');
@@ -76,6 +76,9 @@ export class StoreMessagesService {
 
   toggleShowChat() {
     return (this.showChat = !this.showChat);
+  }
+  toggleFiles() {
+    return this.showPersonal = 'files';
   }
   closeChat() {
     return (this.showChat = false);

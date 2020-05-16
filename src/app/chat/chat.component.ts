@@ -30,6 +30,8 @@ export class ChatComponent implements OnInit {
   closeChat() {
     return this.messageServis.closeChat();
   }
-
+  toggleFiles(){
+    return this.messageServis.toggleFiles()
+  }
   ngOnInit(): void {}
 }

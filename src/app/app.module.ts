@@ -19,6 +19,7 @@ import { FilesComponent } from './chat/res/view/files/files.component';
 import { MainUserComponent } from './chat/res/view/main-user/main-user.component';
 import { UsersComponent } from './chat/res/view/users/users.component';
 import { AddQuestionComponent } from './chat/res/view/add-question/add-question.component';
+import { ChatHeaderComponent } from './chat/res/view/chat-header/chat-header.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AddQuestionComponent } from './chat/res/view/add-question/add-question.
     MainUserComponent,
     UsersComponent,
     AddQuestionComponent,
+    ChatHeaderComponent,
   ],
   imports: [
     BrowserModule,

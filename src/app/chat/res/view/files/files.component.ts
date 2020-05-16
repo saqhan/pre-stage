@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {StoreMessagesService} from "../../../../store-messages.service";
 @Component({
   selector: 'app-files',
   templateUrl: './files.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mesageServis: StoreMessagesService) { }
+
+  toggleUsers() {
+    return this.mesageServis.toggleUsers();
+  }
 
   ngOnInit(): void {
   }
