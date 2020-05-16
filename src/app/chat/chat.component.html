@@ -8,7 +8,7 @@
             <i class="fas fa-times-circle"></i>
           </a>
         </div>
-        <div [ngSwitch]="isShowPersonal()">
+        <div class="col-12" [ngSwitch]="isShowPersonal()">
           <div *ngSwitchCase="'person'">
             <div class="personal-messages">
               <div class="col-12 chat-user-main">
@@ -81,7 +81,7 @@
                   </div>
                 </div>
               </div>
-                <app-add-question></app-add-question>
+              <app-add-question></app-add-question>
             </div>
           </div>
           <div *ngSwitchCase="'users'">
@@ -97,10 +97,16 @@
       </div>
     </div>
   </div>
-</div>
-<div class="open-chat">
-  <button class="btn-open" (click)="toggleShowChat()">
-    <span *ngIf="!isShowChat()"><i class="far fa-comment-dots"></i></span>
-    <span *ngIf="isShowChat()"><i class="fas fa-times"></i></span>
-  </button>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="open-chat">
+          <button class="btn-open" (click)="toggleShowChat()">
+            <span *ngIf="!isShowChat()"><i class="far fa-comment-dots"></i></span>
+            <span *ngIf="isShowChat()"><i class="fas fa-times"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

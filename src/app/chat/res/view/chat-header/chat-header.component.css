@@ -1,5 +1,6 @@
 .block-file {
   cursor: pointer;
+  margin-left: 15px;
 }
 .chat-files {
   text-align: center;
@@ -14,7 +15,7 @@
 }
 
 .input-search {
-  width: 300px;
+  width: 285px;
   border-radius: 3px;
   border: none;
   background-color: #ececec;
@@ -35,5 +36,4 @@
 .block-file i {
   font-size: 18px;
   color: #5a5a5a;
-  margin-left: -20px;
 }

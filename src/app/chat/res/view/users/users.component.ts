@@ -12,23 +12,8 @@ export class UsersComponent implements OnInit {
 
   messages = this.messageServis.messages;
 
-  isShowChat() {
-    return this.messageServis.showChat;
-  }
-
-  isShowPersonal() {
-    return this.messageServis.showPersonal;
-  }
-
   togglePersonal() {
     return this.messageServis.togglePersonal();
-  }
-
-  toggleShowChat() {
-    return this.messageServis.toggleShowChat();
-  }
-  closeChat() {
-    return this.messageServis.closeChat();
   }
 
   ngOnInit(): void {
