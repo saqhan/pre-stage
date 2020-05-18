@@ -1,6 +1,6 @@
 
 .chat-user-main {
-  padding: 10px;
+  padding: 10px 0px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }
@@ -109,3 +109,32 @@
 }
 
 
+@media (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper-chat {
+    max-width: inherit;
+  }
+  .user {
+    padding: 0px;
+  }
+  .chat-user-main{
+    padding: 10px 0px;
+  }
+  .add::after {
+    right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .user-info {
+    justify-content: flex-start;
+  }
+  .message::after {
+    left: 240px;
+  }
+  .chat-user {
+    padding: 5px 0px;
+  }
+}

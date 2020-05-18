@@ -1,0 +1,19 @@
+<div class="lenta-news d-flex justify-content-between" *ngIf="lenta">
+  <div
+    class="lenta-img pr-4"
+    [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+  ></div>
+  <div class="lenta-info">
+    <div class="lenta-category small text-danger">
+      {{ category }}
+    </div>
+    <div class="lenta-title font-weight-bold pt-1">
+      {{ title }}
+    </div>
+    <div class="btn-read">
+      <a routerLink="/second-page/" routerLinkActive="active"
+      >Read Report</a
+      >
+    </div>
+  </div>
+</div>

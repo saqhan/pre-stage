@@ -1,7 +1,7 @@
-<div class="wrapper">
-  <div class="wrapper-chat" *ngIf="isShowChat()">
-    <div class="container">
-      <div class="row">
+<div class="container">
+  <div class="row">
+    <div class="wrapper">
+      <div class="wrapper-chat" *ngIf="isShowChat()">
         <div class="col-12 header-chat">
           Чат с банком
           <a routerLink="#" (click)="closeChat()">
@@ -48,7 +48,7 @@
                       <span>Ксения, бизнес-ассистент</span>
                     </div>
                     <span class="admin-text"
-                      >Так давайте снимим карантин, пусть все выйдут на
+                    >Так давайте снимим карантин, пусть все выйдут на
                       работу!</span
                     >
                     <span class="mess-date">30.08.2020 09:20</span>
@@ -57,7 +57,7 @@
                 <div class="personal-mess">
                   <div class="mess-user">
                     <span class="user-text"
-                      >Мировой заговр, все об этом знают!</span
+                    >Мировой заговр, все об этом знают!</span
                     >
                     <span class="mess-date">30.08.2020 09:20</span>
                   </div>
@@ -68,7 +68,7 @@
                       <span>Ксения, бизнес-ассистент</span>
                     </div>
                     <span class="admin-text"
-                      >Мы с Вами согласны и сейчас перевели миллион на
+                    >Мы с Вами согласны и сейчас перевели миллион на
                       лечение.</span
                     >
                     <span class="mess-date">30.08.2020 09:20</span>
@@ -84,21 +84,18 @@
               <app-add-question></app-add-question>
             </div>
           </div>
-          <div *ngSwitchCase="'users'">
+          <div class="users" *ngSwitchCase="'users'">
             <app-chat-header></app-chat-header>
             <app-main-user></app-main-user>
             <app-users></app-users>
-            <app-add-question></app-add-question>
           </div>
+          <app-add-question></app-add-question>
           <div *ngSwitchCase="'files'">
             <app-files></app-files>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
+
       <div class="col-12">
         <div class="open-chat">
           <button class="btn-open" (click)="toggleShowChat()">
@@ -107,6 +104,9 @@
           </button>
         </div>
       </div>
+
     </div>
   </div>
 </div>
+
+

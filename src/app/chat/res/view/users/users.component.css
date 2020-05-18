@@ -73,7 +73,7 @@
 }
 
 .add::after {
-  content: "1";
+  content: "3";
   background-color: #c73f45;
   padding: 1px 6px;
   color: #fff;
@@ -106,4 +106,37 @@
   font-weight: 500;
 }
 
+@media (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper-chat {
+    max-width: inherit;
+  }
+  .user {
+    padding: 0px;
+  }
+  .chat-user {
+    padding: 10px 0px;
+  }
+  .add::after {
+    right: 0px;
+  }
+}
 
+@media (max-width: 320px) {
+  .user-info {
+    justify-content: flex-start;
+  }
+  .user-info .name {
+    font-weight: 500;
+    font-size: 14px;
+    width: 130px;
+  }
+  .message::after {
+    left: 240px;
+  }
+  .chat-user {
+    padding: 5px 0px;
+  }
+}

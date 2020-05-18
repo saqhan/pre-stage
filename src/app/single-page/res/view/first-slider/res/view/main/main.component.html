@@ -1,0 +1,20 @@
+<div *ngIf="main">
+  <div
+    class="img-news m-auto"
+    [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+  ></div>
+  <div class="category-news pt-3 text-primary small">
+    {{ category }}
+  </div>
+  <div class="title-news pt-3 h2 font-weight-bold">
+    {{ title }}
+  </div>
+  <div class="sub-title-news pt-3 pb-3 text-muted">
+    {{ subTitle }}
+  </div>
+  <a
+    routerLink="/second-page/"
+    class="btn btn-primary btn-custom"
+  >Read Story</a
+  >
+</div>

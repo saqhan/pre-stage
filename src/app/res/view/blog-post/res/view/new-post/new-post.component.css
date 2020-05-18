@@ -1,0 +1,15 @@
+.blog-img {
+  width: 310px;
+  height: 210px;
+  background-size: cover;
+  border-radius: 3px;
+}
+
+.blog-card {
+  width: 310px;
+  margin: auto;
+}
+
+.blog-category {
+  font-weight: 600;
+}

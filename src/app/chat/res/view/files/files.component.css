@@ -88,3 +88,11 @@
   font-size: 12px;
   color: #5a5a5a;
 }
+
+@media (max-width: 375px) {
+
+  .input-search {
+    width: auto;
+    padding: 10px 30px;
+  }
+}

@@ -14,7 +14,7 @@
   border-radius: 2px;
   margin-bottom: 10px;
   width: 400px;
-  height: 88vh;
+  height: 85vh;
   background-color: #fff;
 }
 
@@ -28,6 +28,10 @@
   justify-content: center;
 }
 
+.users {
+  height: 72vh;
+  overflow: scroll;
+}
 
 
 .chat-user-main {
@@ -143,7 +147,7 @@
 
 .header-chat a {
   position: relative;
-  right: -120px;
+  right: -25%;
   display: block;
   top: 3px;
   padding-bottom: 3px;
@@ -301,4 +305,14 @@
   .personal-messages {
     height: 93vh;
   }
+}
+@media (max-width: 320px) {
+  .chat-header a {
+    right: 25%;
+  }
+  .wrapper-chat {
+
+    height: 110vh;
+  }
+
 }

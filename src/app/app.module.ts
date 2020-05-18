@@ -20,6 +20,11 @@ import { MainUserComponent } from './chat/res/view/main-user/main-user.component
 import { UsersComponent } from './chat/res/view/users/users.component';
 import { AddQuestionComponent } from './chat/res/view/add-question/add-question.component';
 import { ChatHeaderComponent } from './chat/res/view/chat-header/chat-header.component';
+import { LentaComponent } from './single-page/res/view/first-slider/res/view/lenta/lenta.component';
+import { MainComponent } from './single-page/res/view/first-slider/res/view/main/main.component';
+import { NewPostComponent } from './res/view/blog-post/res/view/new-post/new-post.component';
+import { PopularNewsComponent } from './single-page/res/view/popular/res/view/popular-news/popular-news.component';
+import { EventCardComponent } from './single-page/res/view/events/res/view/event-card/event-card.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,11 @@ import { ChatHeaderComponent } from './chat/res/view/chat-header/chat-header.com
     UsersComponent,
     AddQuestionComponent,
     ChatHeaderComponent,
+    LentaComponent,
+    MainComponent,
+    NewPostComponent,
+    PopularNewsComponent,
+    EventCardComponent,
   ],
   imports: [
     BrowserModule,

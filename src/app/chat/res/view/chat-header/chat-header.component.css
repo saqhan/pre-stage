@@ -15,7 +15,7 @@
 }
 
 .input-search {
-  width: 285px;
+  width: 95%;
   border-radius: 3px;
   border: none;
   background-color: #ececec;
@@ -37,3 +37,15 @@
   font-size: 18px;
   color: #5a5a5a;
 }
+
+@media (max-width: 375px) {
+  .chat-files {
+    justify-content: center;
+  }
+  .input-search {
+    width: auto;
+    padding: 10px 30px;
+  }
+}
+
+
