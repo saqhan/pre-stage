@@ -25,6 +25,8 @@ import { MainComponent } from './single-page/res/view/first-slider/res/view/main
 import { NewPostComponent } from './res/view/blog-post/res/view/new-post/new-post.component';
 import { PopularNewsComponent } from './single-page/res/view/popular/res/view/popular-news/popular-news.component';
 import { EventCardComponent } from './single-page/res/view/events/res/view/event-card/event-card.component';
+import { MainUserCardComponent } from './chat/res/view/main-user/res/view/main-user-card/main-user-card.component';
+import { UserCardComponent } from './chat/res/view/users/res/view/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { EventCardComponent } from './single-page/res/view/events/res/view/event
     NewPostComponent,
     PopularNewsComponent,
     EventCardComponent,
+    MainUserCardComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,

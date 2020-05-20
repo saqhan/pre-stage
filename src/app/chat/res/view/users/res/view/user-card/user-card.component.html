@@ -1,0 +1,18 @@
+<div>
+  <div class="left">
+    <div
+      class="img-user"
+      [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+    ></div>
+  </div>
+  <div class="right">
+    <div class="user-data">
+      <div class="user-name"> {{ name }} </div>
+      <div class="message-date"> {{ date }} </div>
+    </div>
+    <div class="user-mess">
+      {{ message }}
+<!--      <span class="new-mess">2</span>-->
+    </div>
+  </div>
+  <div>

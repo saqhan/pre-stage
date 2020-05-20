@@ -1,32 +1,12 @@
-<div class="" *ngFor="let main of messages">
- <div class="">
-   <div class="col-12 chat-user-main" *ngIf="main.main" >
-     <div class="user" (click)="togglePersonal()" >
-       <div class="user-img">
-         <div
-           class="img"
-           [ngStyle]="{
-                'background-image':
-                  'url(' + main.img + ')'
-              }"
-         ></div>
-       </div>
-       <div class="user-text">
-         <div class="user-info">
-           <div class="name">
-             {{main.name}}
-           </div>
-           <div class="date">
-             {{main.date}}
-           </div>
-         </div>
-         <div class="message" >
-                <span class="add">
-                  {{main.message}}</span
-                >
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+<div *ngFor="let main of messages">
+  <div class="main-wrapper"*ngIf="main.main" >
+    <app-main-user-card
+      [name]="main.name"
+      [message]="main.message"
+      [img]="main.img"
+      [date]="main.date"
+
+    ></app-main-user-card>
+  </div>
 </div>
+

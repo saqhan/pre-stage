@@ -26,6 +26,52 @@ a:hover {
   color: inherit;
 }
 
+
+
+
+
+
+.message {
+  font-size: 14px;
+  height: 21px;
+  overflow: hidden;
+  width: 260px;
+  margin-top: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.user-img {
+  width: 20%;
+  margin: auto;
+}
+
+.user-img .img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: auto;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.user-info .name {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+
 @media (max-width: 375px) {
   .wrapper {
     width: 100%;
