@@ -2,6 +2,9 @@
 .wrap-main {
   display: flex;
 }
+.user-wrapper {
+  cursor: pointer;
+}
 
 .left {
   width: 15%;
@@ -10,7 +13,7 @@
 }
 
 .right {
-  width: 75%;
+  width: 80%;
   margin-right: 10px;
   overflow: hidden;
   display: inline-block;
@@ -56,14 +59,14 @@
   content: "        ";
   width: 25%;
   position: relative;
-  right: 30%;
+  right: 19%;
   z-index: 0;
   background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 75%,#fff 0);
 }
 
 .new-mess {
   position: relative;
-  right: 18%;
+  right: 10%;
   margin-top: 3px;
   font-size: 11px;
   z-index: 99;

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {StoreMessagesService} from "../../../../../../../store-messages.service";
 
 @Component({
   selector: 'app-main-user-card',
@@ -13,8 +14,11 @@ export class MainUserCardComponent implements OnInit {
   @Input() date:string;
 
 
-  constructor() { }
+  constructor(private storeMessagesService: StoreMessagesService) { }
 
+  togglePersonal(){
+    return this.storeMessagesService.togglePersonal();
+  }
   ngOnInit(): void {
   }
 

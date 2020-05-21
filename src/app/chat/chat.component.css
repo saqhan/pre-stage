@@ -32,6 +32,7 @@
   width: 100%;
   height: 72vh;
   overflow: overlay;
+  padding: 0px 15px;
 }
 
 
@@ -259,7 +260,7 @@
   margin-right: 3px;
 }
 .messages-block {
-  margin-bottom: 15px;
+  height: 62vh;
 }
 .btn-open {
   width: 60px;

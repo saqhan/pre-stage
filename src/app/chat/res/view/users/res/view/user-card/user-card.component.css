@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.user-card {
+  cursor: pointer;
+}
+
 .left {
   width: 15%;
   margin: auto;
@@ -10,8 +14,7 @@
 }
 
 .right {
-  width: 75%;
-  margin-right: 10px;
+  width: 80%;
   overflow: hidden;
   display: inline-block;
   border-bottom: 1px solid #ececec;
@@ -56,9 +59,8 @@
 
 .user-mess::after {
   content: "        ";
-  width: 25%;
   position: relative;
-  right: 20%;
+  right: 14%;
   z-index: 0;
   background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 100%,#fff 0);
 
@@ -66,7 +68,7 @@
 
 .new-mess {
   position: absolute;
-  right: 6%;
+  right: 14%;
   margin-top: 3px;
   font-size: 11px;
   z-index: 99;

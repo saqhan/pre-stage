@@ -1,14 +1,13 @@
-<div class="container">
-  <div class="row">
+
     <div class="wrapper">
       <div class="wrapper-chat" *ngIf="isShowChat()">
-        <div class="col-12 header-chat">
+        <div class="header-chat">
           Чат с банком
           <a routerLink="#" (click)="closeChat()">
             <i class="fas fa-times-circle"></i>
           </a>
         </div>
-        <div class="col-12" [ngSwitch]="isShowPersonal()">
+        <div class="content-chat" [ngSwitch]="isShowPersonal()">
           <div *ngSwitchCase="'person'">
             <div class="personal-messages">
               <div class="col-12 chat-user-main">
@@ -81,7 +80,6 @@
                   </div>
                 </div>
               </div>
-              <app-add-question></app-add-question>
             </div>
           </div>
           <div class="users" *ngSwitchCase="'users'">
@@ -89,10 +87,11 @@
             <app-main-user></app-main-user>
             <app-users></app-users>
           </div>
-          <app-add-question></app-add-question>
+
           <div *ngSwitchCase="'files'">
             <app-files></app-files>
           </div>
+          <app-add-question></app-add-question>
         </div>
       </div>
 
@@ -106,7 +105,5 @@
       </div>
 
     </div>
-  </div>
-</div>
 
 
