@@ -249,7 +249,7 @@ export class StoreMessagesService {
 
   ];
 
-  showChat = true;
+  showChat = false;
 
   showPersonal = 'users';
 
