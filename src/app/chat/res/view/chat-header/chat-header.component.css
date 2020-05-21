@@ -39,7 +39,7 @@
 
 @media (max-width: 375px) {
   .chat-files {
-    justify-content: center;
+    /*justify-content: center;*/
   }
   .input-search {
     width: auto;

@@ -77,3 +77,16 @@
   padding: 0px 5px;
   color: #fff;
 }
+
+@media (max-width: 414px) {
+
+  .user-mess::after {
+    right: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  .new-mess {
+    right: 12%;
+  }
+}

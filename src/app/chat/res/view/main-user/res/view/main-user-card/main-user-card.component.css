@@ -75,3 +75,46 @@
   padding: 0px 5px;
   color: #fff;
 }
+
+@media (max-width: 414px) {
+  .new-mess {
+    right: 6%;
+  }
+  .user-mess::after {
+    right: 15%;
+  }
+}
+
+@media (max-width: 375px) {
+  .right {
+    width: 77%;
+  }
+  .new-mess {
+    right: 16%;
+  }
+  .user-mess::after {
+    right: 25%;
+  }
+  .user-wrapper {
+    width: 365px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .user-wrapper {
+    width: 320px;
+  }
+  .message-date {
+    font-size: 11px;
+  }
+  .right {
+    width: 80%;
+  }
+  .new-mess {
+    right: 27%;
+  }
+  .user-mess::after {
+    right: 40%;
+  }
+}
